@@ -1,0 +1,14 @@
+version: '3'
+services:
+  authdb:
+    image: 'postgres:10.1'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: 'p@ssw0rd'
+      POSTGRES_USER: 'auth'
+      POSTGRES_DB: 'auth'
+    volumes:
+      - authdbdata:/var/lib/postgresql/data
+volumes:
+  authdbdata:
