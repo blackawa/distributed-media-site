@@ -26,8 +26,14 @@ class AccountsRepositoryTest {
     }
 
     @Test
-    fun findByUsername() {
+    fun findByUsernameでアカウントが見つかる() {
         val account = accountsRepository.findByUsername("blackawa")
         assertThat(account.username).isEqualTo("blackawa")
+    }
+
+    @Test
+    fun findByUsernameでアカウントが見つからない() {
+        val account = accountsRepository.findByUsername("whitera")
+        assertThat(account).isNull()
     }
 }

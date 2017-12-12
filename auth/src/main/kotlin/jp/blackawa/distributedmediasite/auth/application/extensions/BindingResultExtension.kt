@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.auth
+package jp.blackawa.distributedmediasite.auth.application.extensions
 
 import jp.blackawa.distributedmediasite.auth.presentation.response.BadRequest
 import org.springframework.validation.BindingResult
