@@ -1,6 +1,5 @@
 package jp.blackawa.distributedmediasite.customerfront
 
-import jp.blackawa.distributedmediasite.customerfront.application.manager.ApiReactiveAuthenticationManager
 import jp.blackawa.distributedmediasite.customerfront.application.services.SessionsService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

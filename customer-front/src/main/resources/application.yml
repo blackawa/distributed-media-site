@@ -1,2 +1,5 @@
 server:
   port: 8081
+service:
+  endpoint:
+    auth: "http://localhost:8080"
