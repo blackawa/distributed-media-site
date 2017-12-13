@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.auth.datasource.entities
+package jp.blackawa.distributedmediasite.auth.infrastructure.entities
 
 import javax.persistence.*
 

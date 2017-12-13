@@ -1,6 +1,6 @@
-package jp.blackawa.distributedmediasite.auth.datasource.repositories
+package jp.blackawa.distributedmediasite.auth.infrastructure.repositories
 
-import jp.blackawa.distributedmediasite.auth.datasource.entities.Account
+import jp.blackawa.distributedmediasite.auth.infrastructure.entities.Account
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.stereotype.Repository

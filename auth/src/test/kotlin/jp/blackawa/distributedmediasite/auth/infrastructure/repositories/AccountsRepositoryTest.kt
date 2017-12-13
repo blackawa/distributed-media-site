@@ -1,6 +1,6 @@
-package jp.blackawa.distributedmediasite.auth.datasource.repositories
+package jp.blackawa.distributedmediasite.auth.infrastructure.repositories
 
-import jp.blackawa.distributedmediasite.auth.datasource.entities.Account
+import jp.blackawa.distributedmediasite.auth.infrastructure.entities.Account
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
