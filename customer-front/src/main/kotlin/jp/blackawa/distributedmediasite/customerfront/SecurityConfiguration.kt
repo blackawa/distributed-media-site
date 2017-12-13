@@ -13,24 +13,6 @@ import org.springframework.security.web.server.context.WebSessionServerSecurityC
 @Configuration
 @EnableWebFluxSecurity
 class SecurityConfiguration {
-//    // 毎回のアクセスごとの認証・認可はJWTをパースして行いたい。
-//    override fun configure(web: WebSecurity) {
-//        web.ignoring().antMatchers(
-//            "/images/**",
-//            "/css/**",
-//            "/javascripts/**"
-//        )
-//    }
-//
-//    override fun configure(http: HttpSecurity) {
-//        http.authorizeRequests().antMatchers("/").permitAll()
-//            .anyRequest().authenticated()
-//
-//        http.logout()
-//            .logoutRequestMatcher(AntPathRequestMatcher("/signout**"))
-//            .logoutSuccessUrl("")
-//    }
-
     @Bean
     fun reactiveAuthenticationManager(sessionsService: SessionsService): ReactiveAuthenticationManager =
         ApiReactiveAuthenticationManager(sessionsService = sessionsService)
@@ -46,7 +28,6 @@ class SecurityConfiguration {
 
         val authorize = http.authorizeExchange()
         authorize.pathMatchers("/").permitAll()
-        authorize.pathMatchers("/accounts/**").hasRole("ACCOUNT")
 
         return http.build()
     }
