@@ -1,7 +1,7 @@
-package jp.blackawa.distributedmediasite.customerauth.application.services
+package jp.blackawa.distributedmediasite.clientauth.application.services
 
-import jp.blackawa.distributedmediasite.customerauth.infrastructure.entities.Account
-import jp.blackawa.distributedmediasite.customerauth.infrastructure.repositories.AccountsRepository
+import jp.blackawa.distributedmediasite.clientauth.infrastructure.repositories.AccountsRepository
+import jp.blackawa.distributedmediasite.clientauth.infrastrucutre.entites.Account
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 
@@ -10,13 +10,14 @@ class AccountsService(
     private val bCryptPasswordEncoder: BCryptPasswordEncoder,
     private val accountsRepository: AccountsRepository
 ) {
-    fun create(username: String, password: String): Long {
+    fun create(email: String, password: String, roles: Array<String>): Long {
         val account = accountsRepository.save(
             Account(
-                username = username,
+                email = email,
                 password = bCryptPasswordEncoder.encode(password)
             )
         )
+        // TODO: save roles
         return account.id
     }
 }

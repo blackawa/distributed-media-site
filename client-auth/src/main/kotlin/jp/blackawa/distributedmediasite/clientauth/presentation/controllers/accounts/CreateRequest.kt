@@ -3,7 +3,7 @@ package jp.blackawa.distributedmediasite.clientauth.presentation.controllers.acc
 import java.util.*
 
 data class CreateRequest(
-    val username: String = "",
+    val email: String = "",
     val password: String = "",
     val roles: Array<String> = arrayOf()
 ) {
@@ -13,7 +13,7 @@ data class CreateRequest(
 
         other as CreateRequest
 
-        if (username != other.username) return false
+        if (email != other.email) return false
         if (password != other.password) return false
         if (!Arrays.equals(roles, other.roles)) return false
 
@@ -21,7 +21,7 @@ data class CreateRequest(
     }
 
     override fun hashCode(): Int {
-        var result = username.hashCode()
+        var result = email.hashCode()
         result = 31 * result + password.hashCode()
         result = 31 * result + Arrays.hashCode(roles)
         return result

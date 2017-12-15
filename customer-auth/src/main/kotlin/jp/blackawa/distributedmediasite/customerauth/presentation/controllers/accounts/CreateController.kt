@@ -31,7 +31,7 @@ class CreateController(
         if (bindingResult.hasErrors()) {
             throw BadRequestException(bindingResult.badRequests())
         }
-        val id = accountsService.create(request)
+        val id = accountsService.create(username = request.username, password = request.password)
         val token = tokensService.create(id.toString())
         val headers = HttpHeaders()
         headers.add("location", "/accounts/$id")

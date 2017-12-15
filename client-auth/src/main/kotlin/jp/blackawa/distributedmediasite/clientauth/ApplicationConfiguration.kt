@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.customerauth
+package jp.blackawa.distributedmediasite.clientauth
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
