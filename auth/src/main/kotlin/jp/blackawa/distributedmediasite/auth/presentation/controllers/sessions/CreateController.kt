@@ -1,9 +1,8 @@
-package jp.blackawa.distributedmediasite.auth.presentation.controllers
+package jp.blackawa.distributedmediasite.auth.presentation.controllers.sessions
 
 import jp.blackawa.distributedmediasite.auth.application.extensions.badRequests
 import jp.blackawa.distributedmediasite.auth.application.services.SessionsService
 import jp.blackawa.distributedmediasite.auth.presentation.exceptions.BadRequestException
-import jp.blackawa.distributedmediasite.auth.presentation.request.sessions.CreateRequest
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import javax.validation.Valid
 
-@RestController
+@RestController("sessions/create")
 @RequestMapping("/sessions")
-class SessionsController(
+class CreateController(
     private val sessionsService: SessionsService
 ) {
     @PostMapping(

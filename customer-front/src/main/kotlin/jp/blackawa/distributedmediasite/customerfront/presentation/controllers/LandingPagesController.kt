@@ -10,5 +10,5 @@ import reactor.core.publisher.Flux
 class LandingPagesController {
     @ResponseBody
     @GetMapping("")
-    fun index() = Flux.just(Index.render())
+    fun index(): Flux<String> = Flux.just(Index.render())
 }

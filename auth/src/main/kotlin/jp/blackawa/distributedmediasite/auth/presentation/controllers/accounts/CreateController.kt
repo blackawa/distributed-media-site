@@ -1,10 +1,9 @@
-package jp.blackawa.distributedmediasite.auth.presentation.controllers
+package jp.blackawa.distributedmediasite.auth.presentation.controllers.accounts
 
 import jp.blackawa.distributedmediasite.auth.application.extensions.badRequests
 import jp.blackawa.distributedmediasite.auth.application.services.AccountsService
 import jp.blackawa.distributedmediasite.auth.application.services.TokensService
 import jp.blackawa.distributedmediasite.auth.presentation.exceptions.BadRequestException
-import jp.blackawa.distributedmediasite.auth.presentation.request.accounts.CreateRequest
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -16,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import javax.validation.Valid
 
-@RestController
+@RestController("accounts/create")
 @RequestMapping("/accounts")
-class AccountsController(
+class CreateController(
     private val accountsService: AccountsService,
     private val tokensService: TokensService
 ) {

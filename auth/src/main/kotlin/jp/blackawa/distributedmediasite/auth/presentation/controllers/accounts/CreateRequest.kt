@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.auth.presentation.request.accounts
+package jp.blackawa.distributedmediasite.auth.presentation.controllers.accounts
 
 import org.hibernate.validator.constraints.Length
 import org.jetbrains.annotations.NotNull
