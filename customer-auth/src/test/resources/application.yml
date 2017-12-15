@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: 'customer_auth'
+    password: 'p@ssw0rd'
+    url: 'jdbc:postgresql://localhost:5432/customer_auth_test'
+  jpa:
+    show-sql: true

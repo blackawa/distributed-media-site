@@ -2,6 +2,6 @@ spring:
   datasource:
     username: 'auth'
     password: 'p@ssw0rd'
-    url: 'jdbc:postgresql://localhost:5432/auth_test'
+    url: 'jdbc:postgresql://localhost:5432/customer_auth'
   jpa:
     show-sql: true

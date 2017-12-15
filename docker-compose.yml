@@ -1,15 +1,15 @@
 version: '3'
 services:
-  authdb:
+  customer_auth_db:
     image: 'postgres:10.1'
     ports:
       - '5432:5432'
     environment:
       POSTGRES_PASSWORD: 'p@ssw0rd'
-      POSTGRES_USER: 'auth'
-      POSTGRES_DB: 'auth'
+      POSTGRES_USER: 'customer_auth'
+      POSTGRES_DB: 'customer_auth'
     volumes:
-      - authdbdata:/var/lib/postgresql/data
-      - ./auth/docker/postgresql/init.sh:/docker-entrypoint-initdb.d/init.sh
+      - customer_auth_db_data:/var/lib/postgresql/data
+      - ./customer-auth/docker/postgresql/init.sh:/docker-entrypoint-initdb.d/init.sh
 volumes:
-  authdbdata:
+  customer_auth_db_data:
