@@ -5,3 +5,5 @@ spring:
     url: 'jdbc:postgresql://localhost:5433/client_auth'
   jpa:
     show-sql: true
+server:
+  port: 8082
