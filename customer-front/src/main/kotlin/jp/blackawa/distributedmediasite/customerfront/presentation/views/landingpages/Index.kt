@@ -1,16 +1,9 @@
 package jp.blackawa.distributedmediasite.customerfront.presentation.views.landingpages
 
 import jp.blackawa.distributedmediasite.customerfront.presentation.controllers.landingpages.IndexController
-import kotlinx.html.*
-import kotlinx.html.stream.appendHTML
-import java.io.StringWriter
+import jp.blackawa.distributedmediasite.customerfront.presentation.views.layout
+import kotlinx.html.h1
 
-fun IndexController.render() = StringWriter().appendHTML().html {
-    head {
-        meta { charset = "utf-8" }
-    }
-    body {
-        h1 { +"Hello from customer-front" }
-    }
-}.toString()
-
+fun IndexController.render() = layout {
+    h1 { +"Hello from customer-front" }
+}
