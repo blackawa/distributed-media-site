@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.customerauth.presentation.controllers.exceptions
+package jp.blackawa.distributedmediasite.clientauth.presentation.controllers.exceptions
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

@@ -2,7 +2,7 @@ package jp.blackawa.distributedmediasite.customerauth.application.services
 
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
-import jp.blackawa.distributedmediasite.`customer-auth`.application.extensions.toDate
+import jp.blackawa.distributedmediasite.customerauth.application.extensions.toDate
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 

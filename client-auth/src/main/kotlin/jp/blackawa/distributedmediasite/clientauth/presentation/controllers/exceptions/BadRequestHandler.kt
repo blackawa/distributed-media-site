@@ -1,7 +1,7 @@
-package jp.blackawa.distributedmediasite.customerauth.presentation.controllers.exceptions
+package jp.blackawa.distributedmediasite.clientauth.presentation.controllers.exceptions
 
-import jp.blackawa.distributedmediasite.customerauth.presentation.exceptions.BadRequestException
-import jp.blackawa.distributedmediasite.customerauth.presentation.response.BadRequest
+import jp.blackawa.distributedmediasite.clientauth.presentation.exceptions.BadRequestException
+import jp.blackawa.distributedmediasite.clientauth.presentation.responses.BadRequest
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler

@@ -1,6 +1,5 @@
 package jp.blackawa.distributedmediasite.customerauth.presentation.controllers.accounts
 
-import jp.blackawa.distributedmediasite.auth.presentation.controllers.accounts.CreateRequest
 import jp.blackawa.distributedmediasite.customerauth.application.extensions.badRequests
 import jp.blackawa.distributedmediasite.customerauth.application.services.AccountsService
 import jp.blackawa.distributedmediasite.customerauth.application.services.TokensService

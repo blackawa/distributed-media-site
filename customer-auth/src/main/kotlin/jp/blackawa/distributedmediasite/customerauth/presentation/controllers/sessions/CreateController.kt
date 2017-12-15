@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.auth.presentation.controllers.sessions
+package jp.blackawa.distributedmediasite.customerauth.presentation.controllers.sessions
 
 import jp.blackawa.distributedmediasite.customerauth.application.extensions.badRequests
 import jp.blackawa.distributedmediasite.customerauth.application.services.SessionsService

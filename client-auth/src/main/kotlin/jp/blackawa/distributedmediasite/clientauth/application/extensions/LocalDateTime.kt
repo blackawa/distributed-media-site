@@ -1,4 +1,4 @@
-package jp.blackawa.distributedmediasite.customerauth.application.extensions
+package jp.blackawa.distributedmediasite.clientauth.application.extensions
 
 import java.time.LocalDateTime
 import java.time.ZoneId
