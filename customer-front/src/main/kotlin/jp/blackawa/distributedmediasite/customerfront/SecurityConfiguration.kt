@@ -25,8 +25,8 @@ class SecurityConfiguration {
 
         http.logout()
 
-        val authorize = http.authorizeExchange()
-        authorize.pathMatchers("/").permitAll()
+//        val authorize = http.authorizeExchange()
+//        authorize.pathMatchers("/").permitAll()
 
         return http.build()
     }

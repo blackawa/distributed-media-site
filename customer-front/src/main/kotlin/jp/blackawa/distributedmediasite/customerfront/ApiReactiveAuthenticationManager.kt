@@ -12,10 +12,10 @@ class ApiReactiveAuthenticationManager(private val sessionsService: SessionsServ
         val username = authentication.name
         val password = authentication.credentials as String
         return sessionsService.create(username, password)
-            .switchIfEmpty(Mono.error(BadCredentialsException("Invalid Credentials")))
+            .switchIfEmpty(Mono.error(BadCredentialsException("Invalid username or password")))
             .map { session ->
                 ApiAuthentication(
-                    "", session.token, AuthorityUtils.createAuthorityList("ROLE_ACCOUNT")
+                    "ACCOUNT", session.token, AuthorityUtils.createAuthorityList("ROLE_ACCOUNT")
                 )
             }
     }

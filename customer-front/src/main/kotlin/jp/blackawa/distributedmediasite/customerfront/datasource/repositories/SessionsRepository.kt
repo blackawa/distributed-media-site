@@ -17,7 +17,7 @@ class SessionsRepository(private val endpointConfiguration: EndpointConfiguratio
         .accept(MediaType.APPLICATION_JSON)
         .exchange()
         .flatMap { res ->
-            if (res.statusCode() == HttpStatus.OK) {
+            if (res.statusCode() == HttpStatus.CREATED) {
                 val token = res.headers().header("Authorization").first().removePrefix("Bearer ")
                 Mono.just(Session(token = token))
             } else {
