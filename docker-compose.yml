@@ -11,5 +11,17 @@ services:
     volumes:
       - customer_auth_db_data:/var/lib/postgresql/data
       - ./customer-auth/docker/postgresql/init.sh:/docker-entrypoint-initdb.d/init.sh
+  client_auth_db:
+    image: 'postgres:10.1'
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_PASSWORD: 'p@ssw0rd'
+      POSTGRES_USER: 'client_auth'
+      POSTGRES_DB: 'client_auth'
+    volumes:
+      - client_auth_db_data:/var/lib/postgresql/data
+      - ./client-auth/docker/postgresql/init.sh:/docker-entrypoint-initdb.d/init.sh
 volumes:
   customer_auth_db_data:
+  client_auth_db_data:

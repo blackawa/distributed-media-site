@@ -1,3 +1,3 @@
 rootProject.name = 'distributed-media-site'
 
-include 'customer-auth', 'customer-front'
+include 'customer-auth', 'customer-front', 'client-auth'

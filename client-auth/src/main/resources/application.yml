@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: 'client_auth'
+    password: 'p@ssw0rd'
+    url: 'jdbc:postgresql://localhost:5433/client_auth'
+  jpa:
+    show-sql: true
