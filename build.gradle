@@ -1,10 +1,5 @@
 subprojects {
     buildscript {
-        ext {
-            kotlinVersion = '1.2.0'
-            springBootVersion = '2.0.0.M7'
-        }
-
         repositories {
             mavenCentral()
             maven { url "https://repo.spring.io/snapshot" }
