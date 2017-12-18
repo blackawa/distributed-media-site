@@ -1,7 +1,7 @@
 package jp.blackawa.distributedmediasite.clientauth.application.services
 
+import jp.blackawa.distributedmediasite.clientauth.infrastructure.entities.Account
 import jp.blackawa.distributedmediasite.clientauth.infrastructure.repositories.AccountsRepository
-import jp.blackawa.distributedmediasite.clientauth.infrastrucutre.entites.Account
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 
