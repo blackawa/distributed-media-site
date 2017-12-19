@@ -1,15 +1,20 @@
 package jp.blackawa.distributedmediasite.clientauth.application.services
 
 import jp.blackawa.distributedmediasite.clientauth.infrastructure.entities.Account
+import jp.blackawa.distributedmediasite.clientauth.infrastructure.entities.RoleCode
 import jp.blackawa.distributedmediasite.clientauth.infrastructure.repositories.AccountsRepository
+import jp.blackawa.distributedmediasite.clientauth.infrastructure.repositories.RoleCodesRepository
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class AccountsService(
     private val bCryptPasswordEncoder: BCryptPasswordEncoder,
-    private val accountsRepository: AccountsRepository
+    private val accountsRepository: AccountsRepository,
+    private val roleCodesRepository: RoleCodesRepository
 ) {
+    @Transactional
     fun create(email: String, password: String, roles: Array<String>): Long {
         val account = accountsRepository.save(
             Account(
@@ -17,7 +22,7 @@ class AccountsService(
                 password = bCryptPasswordEncoder.encode(password)
             )
         )
-        // TODO: save roles
+        account.roleCodes = roleCodesRepository.findAllById(roles.map { it.toLong() }.toList()).toSet()
         return account.id
     }
 }

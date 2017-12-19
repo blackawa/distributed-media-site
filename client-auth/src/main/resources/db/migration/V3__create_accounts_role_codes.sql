@@ -1,7 +1,7 @@
-CREATE TABLE roles (
-  account_id INTEGER NOT NULL,
-  role_code_id    INTEGER NOT NULL,
-  PRIMARY KEY (account_id, role_code_id),
-  FOREIGN KEY (account_id) REFERENCES accounts(id),
-  FOREIGN KEY (role_code_id) REFERENCES role_codes(id)
+CREATE TABLE accounts_role_codes (
+  accounts_id INTEGER NOT NULL,
+  role_codes_id    INTEGER NOT NULL,
+  PRIMARY KEY (accounts_id, role_codes_id),
+  FOREIGN KEY (accounts_id) REFERENCES accounts(id),
+  FOREIGN KEY (role_codes_id) REFERENCES role_codes(id)
 );

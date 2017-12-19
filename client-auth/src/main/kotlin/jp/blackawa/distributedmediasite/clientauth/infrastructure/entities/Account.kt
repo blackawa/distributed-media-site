@@ -11,5 +11,5 @@ data class Account(
     val email: String = "",
     val password: String = "",
     @ManyToMany(cascade = [CascadeType.PERSIST, CascadeType.MERGE])
-    val roleCodes: Set<RoleCode> = setOf()
+    var roleCodes: Set<RoleCode> = setOf()
 )
