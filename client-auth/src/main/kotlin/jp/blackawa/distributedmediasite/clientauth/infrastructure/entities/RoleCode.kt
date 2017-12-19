@@ -9,7 +9,7 @@ data class RoleCode(
     @Id
     val id: Long = 0,
     val description: String = "",
-    val enabledAt: LocalDateTime = LocalDateTime.now(),
+    val enabledAt: LocalDateTime? = null,
     val disabledAt: LocalDateTime? = null,
     @ManyToMany(mappedBy = "roleCodes", cascade = [CascadeType.PERSIST, CascadeType.MERGE])
     val accounts: Set<Account> = setOf()

@@ -11,5 +11,10 @@ data class Account(
     val email: String = "",
     val password: String = "",
     @ManyToMany(cascade = [CascadeType.PERSIST, CascadeType.MERGE])
+    @JoinTable(
+        name = "accounts_role_codes",
+        joinColumns = [JoinColumn(name = "account_id", referencedColumnName = "id")],
+        inverseJoinColumns = [JoinColumn(name = "role_code_id", referencedColumnName = "id")]
+    )
     var roleCodes: Set<RoleCode> = setOf()
 )
