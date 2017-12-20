@@ -28,10 +28,9 @@ class AccountsService(
 
     @Transactional
     fun findById(id: Long): Account? {
-//        return accountsRepository.findById(id).orElse(null)
         return accountsRepository.findById(id).orElse(null).let {
-            val result = it.copy()
-            result.roleCodes = it.roleCodes
+            val result = it.copy(roleCodes = setOf())
+            result.roleCodes = it.roleCodes.map { roleCode -> roleCode.copy(accounts = setOf()) }.toSet()
             result
         }
     }
